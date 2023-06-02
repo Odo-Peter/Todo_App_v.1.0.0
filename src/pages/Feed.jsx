@@ -129,14 +129,14 @@ const Feed = () => {
     e.preventDefault();
 
     const todochecker =
-      e.nativeEvent.srcElement.parentElement.parentElement.children[0]
-        .innerText;
+      e.nativeEvent?.srcElement?.parentElement?.parentElement?.children[0]
+        ?.innerText;
     const filteredTodo = todos.filter(
-      (todo) => todo.todo.toLowerCase() === todochecker.toLowerCase()
+      (todo) => todo?.todo.toLowerCase() === todochecker?.toLowerCase()
     );
     setSaveForEdit(saveForEdit.concat(filteredTodo));
     // console.log(saveForEdit.length);
-    setEditedTodo(filteredTodo[0].todo);
+    setEditedTodo(filteredTodo[0]?.todo);
     setModal(true);
   };
 
@@ -201,7 +201,7 @@ const Feed = () => {
     const id = filteredTodo[0].id;
 
     try {
-      const confirm = window.confirm(`Do yo want to delete ${todochecker}`);
+      const confirm = window.confirm(`Do yo want to delete "${todochecker}"`);
 
       if (confirm) {
         await todoService.deleteOne(id);

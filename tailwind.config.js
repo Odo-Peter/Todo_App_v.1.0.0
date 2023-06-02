@@ -14,6 +14,7 @@ module.exports = {
     },
     colors: {
       'txt-color': 'hsl(236, 100%, 87%)',
+      // 'scroll-color': 'rgba()',
       btn: 'rgb(5, 136, 5)',
     },
     extend: {
@@ -41,5 +42,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar')],
 };

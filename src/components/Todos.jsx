@@ -9,7 +9,7 @@ const Todos = ({ todos, handleEdit, handleDelete, handleChecks }) => {
   };
 
   return (
-    <div className="w-9/12 flex justify-center item-center p-4 h-todo bg-bg-color rounded-xl shadow-time-shadow">
+    <div className="w-9/12 flex justify-center item-center p-4 pr-5 h-todo bg-bg-color rounded-md shadow-time-shadow overflow-y-auto scroll-smooth scrollbar-thin scrollbar-thumb-[gray]">
       <ul className="w-full">
         {todos.map((todo) => {
           return (

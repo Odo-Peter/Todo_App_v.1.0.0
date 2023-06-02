@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 import day from '../img/day.jpg';
 import night from '../img/night.jpg';
 
-const TimeImage = () => {
-  const name = 'Odo Peter';
+const TimeImage = ({ name }) => {
   const [date, setDate] = useState(new Date());
 
   const refreshClock = () => {
@@ -23,18 +22,16 @@ const TimeImage = () => {
   };
 
   const rendered = date.toLocaleDateString('en-US', options);
-
   const timeFrame = date.toLocaleTimeString().split(':')[2].split(' ');
-
-  // console.log(timeFrame.includes('PM'));
+  // const name = 'Odo Peter';
 
   return (
-    <div className="w-txt pt-5">
-      <h2 className="mb-4 text-base">
+    <div className="pt-5 full mr-16">
+      <h2 className="mb-4 text-lg">
         Hey <span className="text-lg font-bold">{name.toUpperCase()}</span>,
         welcome, what are your plans for today?
       </h2>
-      <div className="w-full rounded-xl h-40 shadow-img-shadow">
+      <div className="w-full rounded-xl h-60 shadow-img-shadow">
         <img
           src={timeFrame ? night : day}
           alt="daytime"
@@ -42,7 +39,7 @@ const TimeImage = () => {
         />
       </div>
       <div className="flex flex-col justify-center item-center mt-4 w-full h-16 bg-bg-color rounded-xl text-center shadow-time-shadow">
-        <p className="font-bold">{rendered}</p>
+        <p className="font-bold pt-1">{rendered}</p>
         <p className="text-sm pt-2 tracking-widest">
           {date.toLocaleTimeString()}
         </p>

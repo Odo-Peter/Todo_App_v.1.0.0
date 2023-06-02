@@ -15,12 +15,6 @@ module.exports = {
     colors: {
       'txt-color': 'hsl(236, 100%, 87%)',
       btn: 'rgb(5, 136, 5)',
-      'border-purple': 'hsl(264, 64%, 52%)',
-      'border-green': 'hsl(145, 58%, 55%)',
-      'border-orange': 'hsl(43, 84%, 65%)',
-      'border-red': 'hsl(15, 100%, 70%)',
-      'border-pale-blue': 'hsl(236, 100%, 87%)',
-      'border-blue': 'hsl(246, 80%, 60%)',
     },
     extend: {
       boxShadow: {
@@ -31,10 +25,19 @@ module.exports = {
       height: {
         card: '98vh',
         home: '80vh',
+        todo: '84vh',
       },
       width: {
-        home: '90%',
+        home: '95%',
         txt: '82%',
+      },
+      borderColor: {
+        'border-purple': 'hsl(264, 64%, 52%)',
+        'border-green': 'hsl(145, 58%, 55%)',
+        'border-orange': 'hsl(43, 84%, 65%)',
+        'border-red': 'hsl(15, 100%, 70%)',
+        'border-pale-blue': 'hsl(236, 100%, 87%)',
+        'border-blue': 'hsl(246, 80%, 60%)',
       },
     },
   },
